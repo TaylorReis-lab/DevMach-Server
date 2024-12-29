@@ -1,10 +1,9 @@
-const mongoose = require('mongoose');
-const connectDB = require('./index');
-const User = require('./models/User');
+const connectDB = require('./index')
+const User = require('./models/User')
 
 const seedUsers = async () => {
   try {
-    await connectDB();
+    await connectDB()
 
     const users = [
       {
@@ -21,17 +20,17 @@ const seedUsers = async () => {
         skills: ['Python', 'Django'],
         bio: 'Backend Dev focado em APIs REST.',
       },
-    ];
+    ]
 
-    await User.deleteMany(); // Limpa a coleção
-    await User.insertMany(users);
+    await User.deleteMany() // Limpa a coleção
+    await User.insertMany(users)
 
-    console.log('Seed de dados concluída!');
-    process.exit();
+    console.log('Seed de dados concluída!')
+    process.exit()
   } catch (error) {
-    console.error('Erro ao rodar o seed:', error.message);
-    process.exit(1);
+    console.error('Erro ao rodar o seed:', error.message)
+    process.exit(1)
   }
-};
+}
 
-seedUsers();
+seedUsers()
