@@ -1,5 +1,6 @@
 {
   "name": "devmachserver",
+  "main": "src/server.js",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -21,8 +22,8 @@
     "prettier": "^3.4.2"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon",
+    "start": "node index.js",
+    "dev": "nodemon index.js",
     "debug": "nodemon --inspect"
   },
   "eslintConfig": {
