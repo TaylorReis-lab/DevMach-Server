@@ -1,11 +1,10 @@
-const express = require('express');
-const router = express.Router();
-const { getUsers, createUser } = require('../controllers/userController');
+import { Router } from 'express';
+import UserController from './controllers/UserController.js';
 
-// Rota para listar usuários
-router.get('/', getUsers);
+// Cria uma instância do Router
+const router = Router();
 
 // Rota para criar usuário
-router.post('/', createUser);
+router.post('/', UserController.store);  // Chama o método store do controlador
 
-module.exports = router;
+export default router;

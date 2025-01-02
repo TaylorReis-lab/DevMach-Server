@@ -2,5 +2,6 @@
     "watch": ["src"],
     "ext": "js,json",
     "ignore": ["node_modules"],
-    "exec": "node --inspect=9229 index.js"
+    "exec": "node --inspect=9229 src/app.js"
   }
+  

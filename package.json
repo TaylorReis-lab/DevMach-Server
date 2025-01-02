@@ -1,6 +1,6 @@
 {
   "name": "devmachserver",
-  "main": "src/server.js",
+  "main": "src/app.js",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -15,7 +15,8 @@
     "mongoose": "^8.9.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-scripts": "^3.0.1"
+    "react-scripts": "^3.0.1",
+    "yup": "^1.6.1"
   },
   "devDependencies": {
     "nodemon": "^3.1.9",
@@ -23,7 +24,7 @@
   },
   "scripts": {
     "start": "node index.js",
-    "dev": "nodemon index.js",
+    "dev": "nodemon src/app.js",
     "debug": "nodemon --inspect"
   },
   "eslintConfig": {
