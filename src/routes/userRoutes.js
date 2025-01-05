@@ -1,10 +1,8 @@
-import { Router } from 'express';
-import UserController from './controllers/UserController.js';
+import { Router } from 'express'
+import UserController from '../app/controllers/UserController.js'
 
-// Cria uma instância do Router
-const router = Router();
+const routes = new Router()
 
-// Rota para criar usuário
-router.post('/', UserController.store);  // Chama o método store do controlador
+routes.post('/users', UserController.store)
 
-export default router;
+export default routes
