@@ -39,8 +39,6 @@ class UserController {
       password,
       skills,
       bio,
-      likes: [],
-      dislikes: [],
     })
 
     return res.status(201).json({

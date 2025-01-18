@@ -5,9 +5,7 @@ const UserSchema = new mongoose.Schema({
   email: { type: String, unique: true, required: true },
   password: { type: String },
   skills: { type: [String], required: true },
-  bio: String,
-  likes: [{ type: mongoose.Schema.Types.ObjectId, ref: 'User' }],
-  dislikes: [{ type: mongoose.Schema.Types.ObjectId, ref: 'User' }],
+  bio: String
 })
 
 export default mongoose.model('User', UserSchema)

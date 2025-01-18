@@ -14,7 +14,7 @@ app.use(express.urlencoded({ extended: true })); // Permite lidar com formulári
 
 // Rotas principais
 import UserRoutes from './routes/UserRoutes.js';  // Importando as rotas de usuários
-app.use('/api/users', UserRoutes);  // Usando as rotas no caminho /api/users
+app.use('/users', UserRoutes);  // Usando as rotas no caminho /api/users
 
 // Conectar ao banco de dados
 connectDB();  // Conectar ao banco
