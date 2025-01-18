@@ -11,6 +11,9 @@ class UserController {
       password: Yup.string()
         .min(6, 'Password must have at least 6 characters')
         .required('Password is required'),
+      gender: Yup.string()
+        .oneOf(['masculino', 'feminino'], 'Genero must be "masculino" or "feminino"')
+        .required('Genero is required'),
       skills: Yup.string().required('Skills are required'),
       bio: Yup.string().required('Bio is required'),
     })
@@ -22,7 +25,7 @@ class UserController {
       return res.status(400).json({ error: err.errors })
     }
 
-    const { name, email, password, skills, bio } = req.body
+    const { name, email, password, gender, skills, bio } = req.body
 
     // Verificando se o usuário já existe
     const userExists = await User.findOne({ email })
@@ -37,6 +40,7 @@ class UserController {
       name,
       email,
       password,
+      gender,
       skills,
       bio,
     })
