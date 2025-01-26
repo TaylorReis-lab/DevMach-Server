@@ -6,7 +6,7 @@ const UserSchema = new mongoose.Schema({
   password: { type: String },
   gender: { type: String, required: true, enum: ['Masculino', 'Feminino'] },
   skills: { type: [String], required: true },
-  bio: String
+  bio: String,
 })
 
 export default mongoose.model('User', UserSchema)
